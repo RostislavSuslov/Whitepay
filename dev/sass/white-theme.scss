@@ -1,0 +1,35 @@
+body {
+    font-family: 'Inerta';
+    background-color: #fff;
+}
+
+.person-info__name {
+    color: $title;
+}
+
+.person-info__position {
+    background-color: $accent;
+    color: #fff;
+}
+
+.person-info__social-item {
+    a {
+        background: $accent-2;
+        color: $accent;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .person-photo::before {
+        --height: 150px;
+        height: var(--height);
+        box-shadow: none;
+        background: linear-gradient(transparent, 50%, white);
+        top: calc(100%  - var(--height));
+        
+    }
+
+    .person-photo::after {
+        background: url(/assets/img/bg-person.svg) center 50% / contain no-repeat;
+    }
+}
